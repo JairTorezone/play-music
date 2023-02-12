@@ -39,6 +39,7 @@ body * {
 #player-1 img {
   width: 190px;
   height: 190px;
+  object-fit: cover;
 
   border-radius: 6px;
 }
@@ -51,9 +52,16 @@ body * {
 /* PLAYER-2*/
 #player-2 {
   grid-area: B;
+  height: fit-content;
 }
 
-/* PLAYER-2*/
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* PLAYER-3*/
 #player-3 {
   grid-area: C;
 }
@@ -64,13 +72,20 @@ body * {
   border-radius: 10px;
 }
 
+.player img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
 .info {
   color: #e1e1e6;
-  display: grid;
-  gap: 9.6px;
 }
 .info h1 {
   font-size: 24px;
+  margin-bottom: 9.6px;
 }
 .info p {
   opacity: 0.67;
@@ -82,6 +97,9 @@ body * {
   display: flex;
   justify-content: space-between;
   margin-top: 28px;
+}
+.horizontal .controls {
+  padding-inline: 58px;
 }
 .track {
   margin-top: 28px;
@@ -98,6 +116,7 @@ body * {
   border-radius: 10px;
 
   position: absolute;
+  z-index: 2;
 }
 
 .track::after {
